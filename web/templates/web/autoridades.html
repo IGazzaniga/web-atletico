@@ -1,0 +1,35 @@
+{% extends 'web/index.html' %}
+    <div id="content">
+        {% block content%}
+        {% block imagen%}
+        <img class="img-fluid" src="../../static/web/imgs/comision.png">
+        {% endblock %}
+        <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                  <h3 class="comision"><b>Comisión directiva</b></h3>
+                    <ul id="comision">
+                        <li><p><b>Presidente:</b> Edgardo Aguirre</p></li>
+                        <li><p><b>Vicepresidente:</b> Pablo Mandrini</p></li>
+                        <li><p><b>Tesorero:</b> Asdasdasdsad </p></li>
+                        <li><p><b>Secretario:</b> Gustavo Gazzaniga</p></li>
+                    </ul>
+                </div>
+        </div>
+        {% endblock %}
+        {% block recientes %}
+            <h3>Seguínos en Twitter</h3>
+                <div id="twitter-container">
+                    <a class="twitter-timeline" data-lang="es" data-width="350" data-height="500" data-theme="light" data-link-color="#E81C4F" href="https://twitter.com/CAtleticoR">Tweets by @CAtleticoR</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+            <h3>Dale me gusta a nuestro Facebook</h3>
+            <div class="fb-page" data-href="https://www.facebook.com/CAtleticoR" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-height="500"><blockquote cite="https://www.facebook.com/CAtleticoR" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/CAtleticoR">Club Atlético Rivadavia</a></blockquote></div>
+        {% endblock %}
+        {% block futbol %}{% endblock %}
+        {% block hockey %}{% endblock %}
+        {% block basquet %}{% endblock %}
+        {% block inferiores %}{% endblock %}
+        {% block senior %}{% endblock %}
+        {% block twitter %}{% endblock %}
+        {% block institucionales %}{% endblock %}
+        {% block facebook %}{% endblock %}
+        

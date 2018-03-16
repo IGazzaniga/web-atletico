@@ -1,0 +1,55 @@
+{% extends 'web/novedades-futbol.html' %}
+{% block name %}<title>Búsqueda |Club Atlético Rivadavia</title> {% endblock %}
+{% load static %}
+{% block js %} 
+  <script src="{% static 'web/js/jquery-3.3.1.min.js' %}"></script>
+  <script src="{% static 'web/js/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 'web/js/infinite.min.js' %}"></script>
+  {{ block.super }}
+  <script>
+      var infinite = new Waypoint.Infinite({
+        element: $('.infinite-container')[0],
+        onBeforePageLoad: function () {
+          $('.loading').show();
+        },
+        onAfterPageLoad: function ($items) {
+          $('.loading').hide();
+        }
+      });
+  </script>
+{% endblock %}
+<div id="content">
+    {% block content%}
+    {% block imagen%}
+    {% endblock %}
+    <div class="jumbotron jumbotron-fluid">
+        {% if results %}
+            <div class="infinite-container">
+                <h3>Los resultados de búsqueda para "{{query}}":</h3>
+              <br>
+              {% for result in results %}
+              <div class="infinite-item">
+                  <a href="{% url 'detail' slug=result.slug %}">
+                    <div id="reciente-fut">
+                    <img class="thumbnail" src="{{result.foto.url}}" alt="{{result.titulo}}"> 
+                    <div id="solo-texto">
+                      <b><h4 id="titulo-novedad">{{result.titulo|upper}}</h4></b>
+                      <p id="cuerpo-novedad"><span id="fecha">{{result.fecha_hora}}</span><br>{{result.cuerpo|safe|truncatechars:140}}</p>
+                    </div>
+                    </div>  
+                  </a>
+              </div>
+              {% endfor %}
+            </div>
+            {% if results.has_next %}
+            <a class="infinite-more-link" href="?page={{ results.next_page_number }}">Ver más</a>
+          {% endif %}
+          <div class="loading" style="display: none;">
+            Cargando...
+          </div>
+        {% else %}
+          <h3>No se encontraron resultados para su búsqueda</h3>
+        {% endif %}
+    </div>
+    {% endblock %}
+</div>

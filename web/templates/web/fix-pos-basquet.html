@@ -1,0 +1,20 @@
+{% extends 'web/autoridades.html' %}
+{% block name %}<title>Básquet-Fixture y posiciones|Club Atlético Rivadavia</title> {% endblock %}
+{% load static %}
+<div id="content">
+    {% block content%}
+    {% block imagen%}
+    <img class="img-fluid" src="../../static/web/imgs/basquet-fixture.png">
+    {% endblock %}
+    <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <br>
+               
+            </div>
+    </div>
+    {% endblock %}
+</div>
+{% block js %}
+  {{ block.super }}
+  <script src="{% static 'web/js/tabs.js' %}"></script>
+{% endblock %}

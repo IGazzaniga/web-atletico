@@ -1,0 +1,32 @@
+{% extends 'web/autoridades.html' %}
+{% block name %}<title>Sede|Club Atlético Rivadavia</title> {% endblock %}
+<div id="content">
+    {% block content%}
+    {% block imagen%}
+    <img class="img-fluid" src="../../static/web/imgs/sede.png">
+    {% endblock %}
+    <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <br>
+              <div id="map"></div>
+              <script>
+                function initMap() {
+                  var sede = {lat: -35.487633, lng: -62.977672};
+                  var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 17,
+                    center: sede
+                  });
+                  var marker = new google.maps.Marker({
+                    position: sede,
+                    map: map
+                  });
+                }
+              </script>
+              <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4v5mIfHjoj1JTl9p63FI84wtJetYAxE0&callback=initMap">
+              </script>
+               
+            </div>
+    </div>
+    {% endblock %}
+</div>

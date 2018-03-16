@@ -1,0 +1,111 @@
+{% extends 'web/fix-pos-basquet.html' %}
+{% block name %}<title>Inferiores-Plantel y CT|Club Atlético Rivadavia</title> {% endblock %}
+<div id="content">
+    {% block content%}
+    {% block imagen%}
+    <img class="img-fluid" src="../../static/web/imgs/inferiores-plantel.jpg">
+    {% endblock %}
+    <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <br>
+              <div class="tab fluid-container">
+                <button class="tablinks-plant-inf" onclick="showTable_plant_inf(event, 'Plantel-9')" id="defaultOpen">Plantel 9na</button>
+                <button class="tablinks-plant-inf" onclick="showTable_plant_inf(event, 'Plantel-8')">Plantel 8va</button>
+                <button class="tablinks-plant-inf" onclick="showTable_plant_inf(event, 'Plantel-7')" id="pos">Plantel 7ma</button>
+                <button class="tablinks-plant-inf" onclick="showTable_plant_inf(event, 'Plantel-6')">Plantel 6ta</button>
+              </div>
+
+            <div id="Plantel-9" class="tabcontent">
+                <h4 id="titulo-bloque">Jugadores</h4>
+                <ul>
+                  <li>Palacio, Agustín</li>
+                  <li>Giménez, Cristian</li>
+                  <li>Molina, Miguel</li>
+                  <li>Fuensalida, Marcos</li>
+                  <li>Iglesias, Manuel</li>
+                  <li>Ruiz, Manuel</li>
+                  <li>Sánchez, Juan</li>
+                  <li>Rubio, Germán</li>
+                </ul>
+                <h4 id="titulo-bloque">Cuerpo técnico</h4>
+                <ul>
+                    <li>Director técnico: Rubio, Germán</li>
+                    <li>Ayudante de campo: Fuensalida, Marcos</li>
+                    <li>Preparador físico: Rubio, Germán</li>
+                    <li>Entrenador de arqueros: Basualdo, Francisco</li>
+                    <li>Encargado de las inferiores: Palomeque, José</li>
+                </ul>
+            </div>
+
+            <div id="Plantel-8" class="tabcontent">
+                <h4 id="titulo-bloque">Jugadores</h4>
+                <ul>
+                  <li>Palacio, Agustín</li>
+                  <li>Giménez, Cristian</li>
+                  <li>Molina, Miguel</li>
+                  <li>Fuensalida, Marcos</li>
+                  <li>Iglesias, Manuel</li>
+                  <li>Ruiz, Manuel</li>
+                  <li>Sánchez, Juan</li>
+                  <li>Rubio, Germán</li>
+                </ul>
+                <h4 id="titulo-bloque">Cuerpo técnico</h4>
+                <ul>
+                    <li>Director técnico: Basualdo, Francisco</li>
+                    <li>Ayudante de campo: Fuensalida, Marcos</li>
+                    <li>Preparador físico: Rubio, Germán</li>
+                    <li>Entrenador de arqueros: Basualdo, Francisco</li>
+                    <li>Encargado de las inferiores: Palomeque, José</li>
+                </ul>
+                </div>
+
+            <div id="Plantel-7" class="tabcontent">
+                <h4 id="titulo-bloque">Jugadores</h4>
+                <ul>
+                  <li>Palacio, Agustín</li>
+                  <li>Giménez, Cristian</li>
+                  <li>Molina, Miguel</li>
+                  <li>Fuensalida, Marcos</li>
+                  <li>Iglesias, Manuel</li>
+                  <li>Ruiz, Manuel</li>
+                  <li>Sánchez, Juan</li>
+                  <li>Rubio, Germán</li>
+                </ul>
+                <h4 id="titulo-bloque">Cuerpo técnico</h4>
+                <ul>
+                    <li>Director técnico: Fuensalida, Marcos</li>
+                    <li>Preparador físico: Rubio, Germán</li>
+                    <li>Entrenador de arqueros: Basualdo, Francisco</li>
+                    <li>Encargado de las inferiores: Palomeque, José</li>
+                </ul>
+            </div>
+            <div id="Plantel-6" class="tabcontent">
+                <h4 id="titulo-bloque">Jugadores</h4>
+                <ul>
+                  <li>Palacio, Agustín</li>
+                  <li>Giménez, Cristian</li>
+                  <li>Molina, Miguel</li>
+                  <li>Fuensalida, Marcos</li>
+                  <li>Iglesias, Manuel</li>
+                  <li>Ruiz, Manuel</li>
+                  <li>Sánchez, Juan</li>
+                  <li>Rubio, Germán</li>
+                </ul>
+                <h4 id="titulo-bloque">Cuerpo técnico</h4>
+                <ul>
+                    <li>Director técnico: Palomeque, José</li>
+                    <li>Ayudante de campo: Fuensalida, Marcos</li>
+                    <li>Preparador físico: Rubio, Germán</li>
+                    <li>Entrenador de arqueros: Basualdo, Francisco</li>
+                    <li>Encargado de las inferiores: Palomeque, José</li>
+                </ul>
+                </div>
+
+                    
+              
+            </div>
+        </div>
+    
+      
+    {% endblock %}
+</div>

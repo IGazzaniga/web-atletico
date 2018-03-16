@@ -1,0 +1,40 @@
+{% extends 'web/autoridades.html' %}
+{% block name %}<title>{{articulo.titulo|upper}}|Club Atlético Rivadavia</title> {% endblock %}
+<div id="content">
+    
+    {% block content%}
+    {% block imagen%}
+    {% endblock %}
+    <div id="sin-borde" class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <div class="articulo-detail">
+                <div class="articulo">
+                  <h2 id="titulo-detail" style="word-break: break-word;">{{articulo.titulo|upper}}</h2>
+                  <p>Publicado el: {{articulo.fecha_hora}}</p>
+                      <img class="img-fluid resize" src="{{articulo.foto.url}}" alt="{{articulo.titulo}}"><br>
+                  
+                  {% load social_share %}
+                  <span id="social-share">
+                    <span>{% post_to_facebook object_or_url "Compartir en Facebook" %}</span>
+                    <span>{% post_to_twitter "{{articulo.titulo}}" object_or_url "Compartir en Twitter" %}</span>
+                  </span>
+                  <div id="cuerpo-detail">
+                    {{articulo.cuerpo|safe}}
+                    {% if articulo.album_flickr %}
+                      <div id="galeria">
+                        {{articulo.album_flickr|safe}}
+                      </div>
+                    {% endif %}
+                    {% if articulo.url_video %}
+                      <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="{{articulo.url_video}}" allowfullscreen></iframe>
+                      </div>
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+               
+            </div>
+    </div>
+    {% endblock %}
+</div>

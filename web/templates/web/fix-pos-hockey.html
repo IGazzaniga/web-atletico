@@ -1,0 +1,193 @@
+{% extends 'web/fix-pos-basquet.html' %}
+{% block name %}<title>Hockey-Fixture y posiciones|Club Atlético Rivadavia</title> {% endblock %}
+<div id="content">
+    {% block content%}
+    {% block imagen%}
+    <img class="img-fluid" src="../../static/web/imgs/hockey-fixture.jpg">
+    {% endblock %}
+    <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <br>
+              <div class="tab fluid-container">
+                <button class="tablinks-plant-inf" onclick="showTable_plant_inf(event, 'Fixture')" id="defaultOpen">Fixture</button>
+                <button class="tablinks-plant-inf" onclick="showTable_plant_inf(event, 'Posiciones Primera')">Posiciones Primera</button>
+                <button class="tablinks-plant-inf" onclick="showTable_plant_inf(event, 'Posiciones Sexta')">Posiciones Sexta</button>
+                <button class="tablinks-plant-inf" onclick="showTable_plant_inf(event, 'Posiciones Septima')">Posiciones Séptima</button>
+                
+              </div>
+              <div id="Fixture" class="tabcontent">
+              <table class="table-responsive table-sm table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Fecha</th>
+                    <th scope="col">Rival</th>
+                    <th scope="col">Condición</th>
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Club Social y Deportivo GIAT(Berutti)</td>
+                    <td>Visitante</td>
+                    
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Club Atlético Pellegrini</td>
+                    <td>Local</td>
+                    
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Foot Ball Club Argentino (Trenque Lauquen)</td>
+                    <td>Visitante</td>
+                    
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>Club Deportivo Barrio Alegre</td>
+                    <td>Local</td>
+                    
+                  </tr>
+                  <tr>
+                    <th scope="row">5</th>
+                    <td>Club Atlético Barrio Norte</td>
+                    <td>Visitante</td>
+                    
+                  </tr>
+                  <tr>
+                    <th scope="row">6</th>
+                    <td>Club Sportivo y Recreativo Juventud Unida (30 de agosto)</td>
+                    <td>Local</td>
+                    
+                  </tr>
+                  <tr>
+                    <th scope="row">7</th>
+                    <td>Club Atlético Jorge Newbery (Salliqueló)</td>
+                    <td>Visitante</td>
+                    
+                  </tr>
+                  <tr>
+                    <th scope="row">8</th>
+                    <td>Club de Foot Ball Ferro Carril Oeste (Trenque Lauquen)</td>
+                    <td>Visitante</td>
+                    
+                  </tr>
+                  <tr>
+                    <th scope="row">9</th>
+                    <td>Colegio Santa María (Pehuajó)</td>
+                    <td>Visitante</td>
+                   
+                  </tr>
+                  
+                </tbody>
+              </table>
+              </div>
+              <div id="Posiciones Primera" class="tabcontent">
+              <table class="table-responsive table-sm table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Posición</th>
+                    <th scope="col">Club</th>
+                    <th scope="col">Pts</th>
+                    <th scope="col">PJ</th>
+                    <th scope="col">PG</th>
+                    <th scope="col">PE</th>
+                    <th scope="col">PP</th>
+                    <th scope="col">DG</th>
+                    <th scope="col">GF</th>
+                    <th scope="col">GC</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for pri in primera %}
+                  <tr>
+                    <th scope="row">{{forloop.counter}}</th>
+                    <td>{{pri.equipo.nombre}}</td>
+                    <td>{{pri.puntos}}</td>
+                    <td>{{pri.p_jugados}}</td>
+                    <td>{{pri.p_ganados}}</td>
+                    <td>{{pri.p_empatados}}</td>
+                    <td>{{pri.p_perdidos}}</td>
+                    <td>{{pri.dif_gol}}</td>
+                    <td>{{pri.goles_favor}}</td>
+                    <td>{{pri.goles_contra}}</td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+              </div>
+              <div id="Posiciones Sexta" class="tabcontent">
+              <table class="table-responsive table-sm table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Posición</th>
+                    <th scope="col">Club</th>
+                    <th scope="col">Pts</th>
+                    <th scope="col">PJ</th>
+                    <th scope="col">PG</th>
+                    <th scope="col">PE</th>
+                    <th scope="col">PP</th>
+                    <th scope="col">DG</th>
+                    <th scope="col">GF</th>
+                    <th scope="col">GC</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for sex in sexta %}
+                  <tr>
+                    <th scope="row">{{forloop.counter}}</th>
+                    <td>{{sex.equipo.nombre}}</td>
+                    <td>{{sex.puntos}}</td>
+                    <td>{{sex.p_jugados}}</td>
+                    <td>{{sex.p_ganados}}</td>
+                    <td>{{sex.p_empatados}}</td>
+                    <td>{{sex.p_perdidos}}</td>
+                    <td>{{sex.dif_gol}}</td>
+                    <td>{{sex.goles_favor}}</td>
+                    <td>{{sex.goles_contra}}</td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+              </div>
+              <div id="Posiciones Septima" class="tabcontent">
+                  <table class="table-responsive table-sm table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">Posición</th>
+                        <th scope="col">Club</th>
+                        <th scope="col">Pts</th>
+                        <th scope="col">PJ</th>
+                        <th scope="col">PG</th>
+                        <th scope="col">PE</th>
+                        <th scope="col">PP</th>
+                        <th scope="col">DG</th>
+                        <th scope="col">GF</th>
+                        <th scope="col">GC</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {% for sep in septima %}
+                      <tr>
+                        <th scope="row">{{forloop.counter}}</th>
+                        <td>{{sep.equipo.nombre}}</td>
+                        <td>{{sep.puntos}}</td>
+                        <td>{{sep.p_jugados}}</td>
+                        <td>{{sep.p_ganados}}</td>
+                        <td>{{sep.p_empatados}}</td>
+                        <td>{{sep.p_perdidos}}</td>
+                        <td>{{sep.dif_gol}}</td>
+                        <td>{{sep.goles_favor}}</td>
+                        <td>{{sep.goles_contra}}</td>
+                      </tr>
+                      {% endfor %}
+                    </tbody>
+                  </table>
+                  </div>
+            </div>
+    </div>
+      
+    {% endblock %}
+</div>

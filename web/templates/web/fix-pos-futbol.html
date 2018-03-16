@@ -1,0 +1,252 @@
+{% extends 'web/fix-pos-basquet.html' %}
+{% block name %}<title>Fútbol-Fixture y posiciones|Club Atlético Rivadavia</title> {% endblock %}
+<div id="content">
+    {% block content%}
+    {% block imagen%}
+    <img class="img-fluid" src="../../static/web/imgs/futbol-fixture.png">
+    {% endblock %}
+    <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <br>
+              <div class="tab fluid-container">
+                <button class="tablinks" onclick="showTable(event, 'Fixture')" id="defaultOpen">Fixture</button>
+                <button class="tablinks" onclick="showTable(event, 'Posiciones')" id="pos">Posiciones Primera</button>
+                <button class="tablinks" onclick="showTable(event, 'General')">General Primera</button>
+                <button class="tablinks" onclick="showTable(event, 'Posiciones-Sub21')" id="pos">Posiciones Sub-21</button>
+                <button class="tablinks" onclick="showTable(event, 'General-Sub21')">General Sub-21</button>
+              </div>
+              <div id="Fixture" class="tabcontent">
+              <table class="table-responsive table-sm table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Fecha</th>
+                    <th scope="col">Rival</th>
+                    <th scope="col">Condición</th>
+                    <th scope="col">Resultado 1ra</th>
+                    <th scope="col">Resultado Sub-21</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Club Social y Deportivo González Moreno</td>
+                    <td>Local</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Independiente Fútbol Club (G.M.)</td>
+                    <td>Local</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Club Atlético Amigos Gorra de Cuero</td>
+                    <td>Visitante</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>Club Atlético Barrio Norte</td>
+                    <td>Local</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">5</th>
+                    <td>Racing Foot Ball Club</td>
+                    <td>Visitante</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">6</th>
+                    <td>Club Social y Deportivo Tres Algarrobos</td>
+                    <td>Local</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">7</th>
+                    <td>Club Social y Deportivo Independiente</td>
+                    <td>Visitante</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">8</th>
+                    <td>Huracán Fútbol Club</td>
+                    <td>Local</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">9</th>
+                    <td>Club Social Los Once</td>
+                    <td>Visitante</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">10</th>
+                    <td>Club Social y Atlético Jorge Newbery</td>
+                    <td>Local</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">11</th>
+                    <td>Fútbol Club Tres Algarrobos</td>
+                    <td>Visitante</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                </tbody>
+              </table>
+              </div>
+              <div id="Posiciones" class="tabcontent">
+              <table class="table-responsive table-sm table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Posición</th>
+                    <th scope="col">Club</th>
+                    <th scope="col">Pts</th>
+                    <th scope="col">PJ</th>
+                    <th scope="col">PG</th>
+                    <th scope="col">PE</th>
+                    <th scope="col">PP</th>
+                    <th scope="col">DG</th>
+                    <th scope="col">GF</th>
+                    <th scope="col">GC</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for tabla in tablas %}
+                  <tr>
+                    <th scope="row">{{forloop.counter}}</th>
+                    <td>{{tabla.equipo.nombre}}</td>
+                    <td>{{tabla.puntos}}</td>
+                    <td>{{tabla.p_jugados}}</td>
+                    <td>{{tabla.p_ganados}}</td>
+                    <td>{{tabla.p_empatados}}</td>
+                    <td>{{tabla.p_perdidos}}</td>
+                    <td>{{tabla.dif_gol}}</td>
+                    <td>{{tabla.goles_favor}}</td>
+                    <td>{{tabla.goles_contra}}</td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+              </div>
+              <div id="Posiciones-Sub21" class="tabcontent">
+                  <table class="table-responsive table-sm table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">Posición</th>
+                        <th scope="col">Club</th>
+                        <th scope="col">Pts</th>
+                        <th scope="col">PJ</th>
+                        <th scope="col">PG</th>
+                        <th scope="col">PE</th>
+                        <th scope="col">PP</th>
+                        <th scope="col">DG</th>
+                        <th scope="col">GF</th>
+                        <th scope="col">GC</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {% for tabla in tablas_sub21 %}
+                      <tr>
+                        <th scope="row">{{forloop.counter}}</th>
+                        <td>{{tabla.equipo.nombre}}</td>
+                        <td>{{tabla.puntos}}</td>
+                        <td>{{tabla.p_jugados}}</td>
+                        <td>{{tabla.p_ganados}}</td>
+                        <td>{{tabla.p_empatados}}</td>
+                        <td>{{tabla.p_perdidos}}</td>
+                        <td>{{tabla.dif_gol}}</td>
+                        <td>{{tabla.goles_favor}}</td>
+                        <td>{{tabla.goles_contra}}</td>
+                      </tr>
+                      {% endfor %}
+                    </tbody>
+                  </table>
+                  </div>
+              <div class="tabcontent" id="General"> 
+              <table class="table-responsive table-sm table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Posición</th>
+                    <th scope="col">Club</th>
+                    <th scope="col">Pts</th>
+                    <th scope="col">PJ</th>
+                    <th scope="col">PG</th>
+                    <th scope="col">PE</th>
+                    <th scope="col">PP</th>
+                    <th scope="col">DG</th>
+                    <th scope="col">GF</th>
+                    <th scope="col">GC</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for general in general_p %}
+                  <tr>
+                    <th scope="row">{{forloop.counter}}</th>
+                    <td>{{general.equipo.nombre}}</td>
+                    <td>{{general.puntos}}</td>
+                    <td>{{general.p_jugados}}</td>
+                    <td>{{general.p_ganados}}</td>
+                    <td>{{general.p_empatados}}</td>
+                    <td>{{general.p_perdidos}}</td>
+                    <td>{{general.dif_gol}}</td>
+                    <td>{{general.goles_favor}}</td>
+                    <td>{{general.goles_contra}}</td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+              </div>
+              <div class="tabcontent" id="General-Sub21"> 
+                  <table class="table-responsive table-sm table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">Posición</th>
+                        <th scope="col">Club</th>
+                        <th scope="col">Pts</th>
+                        <th scope="col">PJ</th>
+                        <th scope="col">PG</th>
+                        <th scope="col">PE</th>
+                        <th scope="col">PP</th>
+                        <th scope="col">DG</th>
+                        <th scope="col">GF</th>
+                        <th scope="col">GC</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {% for general in general_sub21 %}
+                      <tr>
+                        <th scope="row">{{forloop.counter}}</th>
+                        <td>{{general.equipo.nombre}}</td>
+                        <td>{{general.puntos}}</td>
+                        <td>{{general.p_jugados}}</td>
+                        <td>{{general.p_ganados}}</td>
+                        <td>{{general.p_empatados}}</td>
+                        <td>{{general.p_perdidos}}</td>
+                        <td>{{general.dif_gol}}</td>
+                        <td>{{general.goles_favor}}</td>
+                        <td>{{general.goles_contra}}</td>
+                      </tr>
+                      {% endfor %}
+                    </tbody>
+                  </table>
+                  </div>
+            </div>
+    </div>
+      
+    {% endblock %}
+</div>
+
+

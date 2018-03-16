@@ -1,0 +1,79 @@
+{% extends 'web/fix-pos-basquet.html' %}
+{% block name %}<title>Básquet-Plantel y CT|Club Atlético Rivadavia</title> {% endblock %}
+<div id="content">
+    {% block content%}
+    {% block imagen%}
+    <img class="img-fluid" src="../../static/web/imgs/basquet1.png">
+    {% endblock %}
+    
+    <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <br>
+              <div class="tab fluid-container">
+                <button class="tablinks-bas" onclick="showTable_bas(event, 'Plantel U13')" id="defaultOpen">Plantel U13</button>
+                <button class="tablinks-bas" onclick="showTable_bas(event, 'Plantel U15')">Plantel U15</button>
+                <button class="tablinks-bas" onclick="showTable_bas(event, 'Plantel U17')">Plantel U17</button>
+                
+              </div>
+              <div id="Plantel U13" class="tabcontent">
+                <h4 id="titulo-bloque">Jugadores</h4>
+                <ul>
+                  <li>Palacio, Agustín</li>
+                  <li>Giménez, Cristian</li>
+                  <li>Molina, Miguel</li>
+                  <li>Fuensalida, Marcos</li>
+                  <li>Iglesias, Manuel</li>
+                  <li>Ruiz, Manuel</li>
+                  <li>Sánchez, Juan</li>
+                  <li>Rubio, Germán</li>
+                </ul>
+                <h4 id="titulo-bloque">Cuerpo técnico</h4>
+                <ul>
+                  <li>Director técnico: Elena, Javier</li>
+                  <li>Preparador físico: Maisterra, Oscar</li>
+                </ul>
+              </div>
+
+              <div id="Plantel U15" class="tabcontent">
+                <h4 id="titulo-bloque">Jugadores</h4>
+                <ul>
+                  <li>Palacio, Agustín</li>
+                  <li>Giménez, Cristian</li>
+                  <li>Molina, Miguel</li>
+                  <li>Fuensalida, Marcos</li>
+                  <li>Iglesias, Manuel</li>
+                  <li>Ruiz, Manuel</li>
+                  <li>Sánchez, Juan</li>
+                  <li>Rubio, Germán</li>
+                </ul>
+                <h4 id="titulo-bloque">Cuerpo técnico</h4>
+                <ul>
+                  <li>Director técnico: Elena, Javier</li>
+                  <li>Preparador físico: Maisterra, Oscar</li>
+                </ul>
+                </div>
+
+                <div id="Plantel U17" class="tabcontent">
+                  <h4 id="titulo-bloque">Jugadores</h4>
+                  <ul>
+                    <li>Palacio, Agustín</li>
+                    <li>Giménez, Cristian</li>
+                    <li>Molina, Miguel</li>
+                    <li>Fuensalida, Marcos</li>
+                    <li>Iglesias, Manuel</li>
+                    <li>Ruiz, Manuel</li>
+                    <li>Sánchez, Juan</li>
+                    <li>Rubio, Germán</li>
+                  </ul>
+                  <h4 id="titulo-bloque">Cuerpo técnico</h4>
+                  <ul>
+                    <li>Director técnico: Elena, Javier</li>
+                    <li>Preparador físico: Maisterra, Oscar</li>
+                  </ul>
+                </div>
+              
+            </div>
+    </div>
+      
+    {% endblock %}
+</div>

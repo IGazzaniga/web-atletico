@@ -1,0 +1,149 @@
+{% extends 'web/fix-pos-basquet.html' %}
+{% block name %}<title>Hockey-Plantel y CT|Club Atlético Rivadavia</title> {% endblock %}
+<div id="content">
+    {% block content%}
+    {% block imagen%}
+    <img class="img-fluid" src="../../static/web/imgs/hockey.png">
+    {% endblock %}
+    <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <br>
+              <div class="tab fluid-container">
+                <button class="tablinks-bas" onclick="showTable_bas(event, 'Plantel Primera')" id="defaultOpen">Plantel Primera</button>
+                <button class="tablinks-bas" onclick="showTable_bas(event, 'Plantel Sub15')">Plantel Sub 15</button>
+                <button class="tablinks-bas" onclick="showTable_bas(event, 'Plantel Sub13')">Plantel Sub 17</button>
+                
+              </div>
+              <div id="Plantel Primera" class="tabcontent">
+                  <h4 id="titulo-bloque">Arqueras</h4>
+                  <ul>
+                      <li>Hillcoat, José</li>
+                      <li>Palacios, Juan Ramón</li>
+                      <li>Ares, Juan</li>
+                  </ul>
+                  <h4 id="titulo-bloque">Defensoras</h4>
+                  <ul>
+                      <li>Palacio, Agustín</li>
+                      <li>Giménez, Cristian</li>
+                      <li>Molina, Miguel</li>
+                      <li>Fuensalida, Marcos</li>
+                      <li>Iglesias, Manuel</li>
+                      <li>Ruiz, Manuel</li>
+                      <li>Sánchez, Juan</li>
+                      <li>Rubio, Germán</li>
+                  </ul>
+                  <h4 id="titulo-bloque">Mediocampistas</h4>
+                  <ul>
+                      <li>Barrera, Gonzalo</li>
+                      <li>Barrera, Nicolás</li>
+                      <li>Díaz, Germán</li>
+                      <li>Luengo, Luciano</li>
+                      <li>Giménez, Franco</li>
+                      <li>Vicente, Franco</li>
+                      <li>Álvarez, Tomás</li>
+                  </ul>
+                  <h4 id="titulo-bloque">Delanteras</h4>
+                  <ul>
+                      <li>Martín, Jorge Pablo</li>
+                      <li>Greco, Matías</li>
+                      <li>Piorno, Juan</li>
+                      <li>Lazarte, Michelle</li>
+                      <li>Navarro, Carlos</li>
+                  </ul>
+                  <h4 id="titulo-bloque">Cuerpo técnico</h4>
+                  <ul>
+                      <li>Director técnico: Elena, Javier</li>
+                      <li>Preparador físico: Maisterra, Oscar</li>
+                  </ul>
+              </div>
+              <div id="Plantel Sub15" class="tabcontent">
+                  <h4 id="titulo-bloque">Arqueras</h4>
+                  <ul>
+                      <li>Hillcoat, José</li>
+                      <li>Palacios, Juan Ramón</li>
+                      <li>Ares, Juan</li>
+                  </ul>
+                  <h4 id="titulo-bloque">Defensoras</h4>
+                  <ul>
+                      <li>Palacio, Agustín</li>
+                      <li>Giménez, Cristian</li>
+                      <li>Molina, Miguel</li>
+                      <li>Fuensalida, Marcos</li>
+                      <li>Iglesias, Manuel</li>
+                      <li>Ruiz, Manuel</li>
+                      <li>Sánchez, Juan</li>
+                      <li>Rubio, Germán</li>
+                  </ul>
+                  <h4 id="titulo-bloque">Mediocampistas</h4>
+                  <ul>
+                      <li>Barrera, Gonzalo</li>
+                      <li>Barrera, Nicolás</li>
+                      <li>Díaz, Germán</li>
+                      <li>Luengo, Luciano</li>
+                      <li>Giménez, Franco</li>
+                      <li>Vicente, Franco</li>
+                      <li>Álvarez, Tomás</li>
+                  </ul>
+                  <h4 id="titulo-bloque">Delanteras</h4>
+                  <ul>
+                      <li>Martín, Jorge Pablo</li>
+                      <li>Greco, Matías</li>
+                      <li>Piorno, Juan</li>
+                      <li>Lazarte, Michelle</li>
+                      <li>Navarro, Carlos</li>
+                  </ul>
+                  <h4 id="titulo-bloque">Cuerpo técnico</h4>
+                  <ul>
+                      <li>Director técnico: Elena, Javier</li>
+                      <li>Preparador físico: Maisterra, Oscar</li>
+                  </ul>
+              </div>
+
+              <div id="Plantel Sub18" class="tabcontent">
+                  <h4 id="titulo-bloque">Arqueras</h4>
+                  <ul>
+                      <li>Hillcoat, José</li>
+                      <li>Palacios, Juan Ramón</li>
+                      <li>Ares, Juan</li>
+                  </ul>
+                  <h4 id="titulo-bloque">Defensoras</h4>
+                  <ul>
+                      <li>Palacio, Agustín</li>
+                      <li>Giménez, Cristian</li>
+                      <li>Molina, Miguel</li>
+                      <li>Fuensalida, Marcos</li>
+                      <li>Iglesias, Manuel</li>
+                      <li>Ruiz, Manuel</li>
+                      <li>Sánchez, Juan</li>
+                      <li>Rubio, Germán</li>
+                  </ul>
+                  <h4 id="titulo-bloque">Mediocampistas</h4>
+                  <ul>
+                      <li>Barrera, Gonzalo</li>
+                      <li>Barrera, Nicolás</li>
+                      <li>Díaz, Germán</li>
+                      <li>Luengo, Luciano</li>
+                      <li>Giménez, Franco</li>
+                      <li>Vicente, Franco</li>
+                      <li>Álvarez, Tomás</li>
+                  </ul>
+                  <h4 id="titulo-bloque">Delanteras</h4>
+                  <ul>
+                      <li>Martín, Jorge Pablo</li>
+                      <li>Greco, Matías</li>
+                      <li>Piorno, Juan</li>
+                      <li>Lazarte, Michelle</li>
+                      <li>Navarro, Carlos</li>
+                  </ul>
+                  <h4 id="titulo-bloque">Cuerpo técnico</h4>
+                  <ul>
+                      <li>Director técnico: Elena, Javier</li>
+                      <li>Preparador físico: Maisterra, Oscar</li>
+                  </ul>
+              </div>
+              
+            </div>
+    </div>
+      
+    {% endblock %}
+</div>

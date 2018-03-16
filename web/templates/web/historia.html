@@ -1,0 +1,105 @@
+{% extends 'web/autoridades.html' %}
+{% block name %}<title>Historia|Club Atlético Rivadavia</title> {% endblock %}
+<div id="content">
+    {% block content%}
+    {% block imagen%}
+    <img class="img-fluid" src="../../static/web/imgs/historia.png">
+    {% endblock %}
+    <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <br>
+               <p>Los mismos hombres que vivían la euforia de haber logrado la autonomía municipal,
+                 convocaban a una lucha más, tras haber logrado el tan ansiado logro, y no titubearon
+                 en darle el nombre de Rivadavia al club que acababan de fundar, como justo reconocimiento
+                 y asentamiento al nuevo Distrito que nacía en la provincia de Buenos Aires. </p><br>
+                 <p>Fue el 13 de abril de 1913 cuando se concretó la fundación del Club Atlético Rivadavia. 
+                 La iniciativa de un grupo de jóvenes dio forma institucional a la actividad deportiva iniciada
+                 en 1911. La necesidad de formar una institución deportiva comenzó a gestarse en las reuniones
+                de comisión del Club Social.</p> <br> <p>La propuesta original fue de Ambrosio Lugones, y aceptada 
+                la misma, se dio el primer paso, que fue la elección del nombre: "Club Atlético Rivadavia". Se 
+                decidió también que la camiseta sería blanca con bastones verticales de color rojo, colores tomados
+                del Alumni Athletic Club, que por ese entonces atravesaba momentos gloriosos</p> <br>
+                <p>De ahí en más, el Club Atlético Rivadavia asume la responsabilidad de ir incrementando
+                 a través de su trayectoria, la historia misma del deporte lugareño. El fútbol adquirió jerarquía
+                 en Rivadavia por la acción permanente de la entidad. El primer partido oficial, se jugó el día
+                 2 de julio de 1911, contra Pico Fútbol Club, en la ciudad de General Pico. Al día de hoy, Atlético
+                es el club más ganador de la Liga del Oeste: consiguió 15 títulos del año. Estos fueron obtenidos 
+                en los años: 1962, 1963, 1964, 1970, 1974, 1975, 1976, 1978, 1979, 1980, 1982, 1983, 1988, 1991 y 2001.
+                Además, cuenta con numerosos títulos de torneos Apertura, Clausura y Liguilla.
+              </p> <br>
+                 <p>Con fecha 13 de abril de 1913, en la cancha de Pelota a Paleta de Miguel Gúrpide, se resuelve
+                 la creación del Club, asumiendo como Presidente y Socio Fundador el Dr. Ambrosio Lugones.
+                 De ahí en más, las actividades de la institución fueron muchas y pujantes: en octubre de 1922
+                 se sumó el tenis, y con él, la participación de la mujer en el deporte. En 1923, 
+                 Clementino García, también impulsor de la creación del Club, escribió la letra de la
+                 marcha, que lleva música de Bartolomé Busso Agnesse.</p><br>
+                 <h5>Instalaciones</h5><br>
+                 <p>La primera cancha de fútbol que tuvo el club, funcionó en un espacio limitado entre
+                   las calles Sarmiento, Leandro N.Alem, San Martín, e Italia. Luego, se trasladó a 
+                   la manzana ubicada entre Belgrano, Dr. Banfi y Viamonte, después se mudó a la calle
+                   Colón, entre Rivadavia y San Martín, y finalmente en 1924 se ubicó al lugar que actualmente ocupa,
+                   en la manzana rodeada por las calles Sarmiento,Lugones, Mitre y Carmen Sixta Isola. Esta propiedad
+                   fue escriturada a favor del Club por decreto N° 1923, luego de obtener la Personería Jurídica. 
+                   Fue inaugurada el 25 de mayo de 1925, en un partido disputado frente a Castex, de La Pampa. 
+                   Dentro del mismo predio, en 1932 se inició la construcción de la pileta de natación, siendo la primera 
+                   de su magnitud.</p><br>
+                   <p>Fue el esfuerzo mancomunado de directivos, socios, simpatizantes y autoridades del pueblo, que a través
+                     de la colaboración y aportes, comprando rifas y asistiendo a fiferentes actividades recreativas,
+                     sociales y culturales, el Club pudo llevar adelante obras importantes, hasta llegar a tener las Instalaciones
+                     con las que actuamente cuenta. En su vida social incluyó a todos los sectores de la población,
+                     y a través de aficionados se cultivó la cultura en sus distintas formaciones.</p><br>
+                    <p>En épocas estivales, su pista al aire libre del campo de deportes servía
+                      para que se llevaran a cabo innumerables reuniones bailables bajo los acordes de destacadas orquestas.
+                      Así, nacieron los festivaes del Folklore en la Frontera, que por más de una década brindaron espectáculos
+                       de jerarquía, con la participación de los más destacados intérpretes del canto argentino.</p><br>
+                    <p>Es el Club Atlético Rivadavia el pionero de las instituciones deportivas
+                      en América, una fiel consecuencia del espíritu de los hombres de la época. Su nacimiento
+                      estuvo íntimamente relacionado a cuestiones y representatividades políticas, pero su
+                      hinchada se diversificó, extendiéndose a lo largo y ancho de todo el pueblo.
+                      La compra de la sede céntrica lo vincula, definitivamente, con la actividad no sólo deportiva, sino también social.
+                    </p><br>
+                    <p>Fuentes:</p>
+                      <ul>
+                          <li><a href="http://futboldeloeste.com.ar/historial-2/">Historial de Fútbol del Oeste</a></li>
+                        <li>Revista del Centenario del Club Atlético Rivadavia. Producción general de Patricia Sánchez.</li>
+                      </ul> 
+                    
+                    
+                   <div id="map"></div>
+                   <script>
+                     function initMap() {
+                      var locations = [
+                           ['Primer cancha', -35.491262, -62.973524, 1],
+                           ['Segunda cancha', -35.490935, -62.978341, 2],
+                           ['Tercera cancha', -35.494717, -62.974039, 3],
+                           ['Estadio actual', -35.4967424, -62.9710584, 4]
+                      ];
+                       var map = new google.maps.Map(document.getElementById('map'), {
+                         zoom: 15,
+                         center: {lat: -35.492098, lng: -62.974028}
+                       });
+                      var infowindow = new google.maps.InfoWindow;
+                      var marker;
+                      for(i=0; i<locations.length; i++){ 
+                           marker = new google.maps.Marker({
+                           position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                           map: map,
+                        });google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                          return function() {
+                              infowindow.setContent(locations[i][0]);
+                              infowindow.open(map, marker);
+                          }
+                     })(marker, i));
+                      }
+                     }
+                   </script>
+                   <script async defer
+                     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbd8Sr7BAcxEnB-73gxZ_8unUtvT1Zayg&callback=initMap">
+                   </script>
+                    
+                 </p>
+               </p>
+            </div>
+    </div>
+    {% endblock %}
+</div>
