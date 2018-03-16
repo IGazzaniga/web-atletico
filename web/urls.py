@@ -15,7 +15,7 @@ from web.views import (search, web_view, novedades_institucionales_view, histori
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^index$', web_view, name="index"),
+    url(r'^$', web_view, name="index"),
     
     url(r'^novedades-institucionales$', novedades_institucionales_view, name="novedades-institucionales"),
     url(r'^historia$', historia_view, name="historia"),
