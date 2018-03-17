@@ -26,7 +26,9 @@ from web.views import (search, web_view, novedades_institucionales_view, histori
                        plantel_ct_basquet_view,fix_pos_basquet_view, novedades_hockey_view, 
                        plantel_ct_hockey_view, fix_pos_hockey_view) #Importamos las vistas
 
-urlpatterns = [url(r'^admin/', include(admin.site.urls)),
+urlpatterns = [
+    url(r'^admin/', include(admin.site.urls)),
+    
     url(r'^$', web_view, name="index"),
     
     url(r'^novedades-institucionales$', novedades_institucionales_view, name="novedades-institucionales"),
