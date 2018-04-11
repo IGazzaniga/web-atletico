@@ -25,7 +25,8 @@ class Articulo(models.Model):
     )
     cuerpo = RichTextField()
     fecha_hora= models.DateTimeField()
-    url_foto = models.CharField(help_text='Url de la imagen, previamente subida a FB u otro lugar', default="", max_length=1500)
+    foto = models.ImageField()
+     ''' url_foto = models.CharField(help_text='Url de la imagen, previamente subida a FB u otro lugar', default="", max_length=1500) '''
     url_video = models.CharField(help_text='Url del video de facebook (opcional). Para obtener el link, ir al video, apretar donde están los 3 puntitos y poner "insertar". Pegar aquí solo el link del video, borrar el resto. Ejemplo: https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FJuanCruzPiornoOficial%2Fvideos%2F302760100205413', max_length=500,blank=True)
     album_flickr = models.CharField(help_text="Subir fotos a Flickr, crear un álbum, compartirlo eligiendo la opción 'Insertar', elegir el tamaño más grande, y pegar el link aquí", max_length=700, blank=True)
     def save(self, *args, **kwargs):

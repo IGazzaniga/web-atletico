@@ -31,7 +31,7 @@
               <div class="infinite-item">
                   <a href="{% url 'detail' slug=result.slug %}">
                     <div id="reciente-fut">
-                    <img class="thumbnail" src="{{result.url_foto}}" alt="{{result.titulo}}"> 
+                    <img class="thumbnail" src="{{result.foto.url}}" alt="{{result.titulo}}"> 
                     <div id="solo-texto">
                       <b><h4 id="titulo-novedad">{{result.titulo|upper}}</h4></b>
                       <p id="cuerpo-novedad"><span id="fecha">{{result.fecha_hora}}</span><br>{{result.cuerpo|safe|truncatechars:140}}</p>
