@@ -11,7 +11,7 @@
                 <div class="articulo">
                   <h2 id="titulo-detail" style="word-break: break-word;">{{articulo.titulo|upper}}</h2>
                   <p>Publicado el: {{articulo.fecha_hora}}</p>
-                      <img class="img-fluid resize" src="{{articulo.foto.url}}" alt="{{articulo.titulo}}"><br>
+                      <img class="img-fluid resize" src="{{articulo.url_foto}}" alt="{{articulo.titulo}}"><br>
                   
                   {% load social_share %}
                   <span id="social-share">

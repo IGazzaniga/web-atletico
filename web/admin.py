@@ -4,7 +4,7 @@ from django.contrib import admin
 from .models import Articulo, Equipo, Torneo, Posiciones
 
 class ArticuloAdmin(admin.ModelAdmin):
-    fields = ['titulo', 'categoria', 'cuerpo', 'fecha_hora', 'foto', 'url_video', 'album_flickr']
+    fields = ['titulo', 'categoria', 'cuerpo', 'fecha_hora', 'url_foto', 'url_video', 'album_flickr']
 
 admin.site.register(Articulo, ArticuloAdmin)
 
