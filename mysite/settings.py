@@ -24,7 +24,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'cg#p$g+j9tax!#a3cup@1$8obt2_+&
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True 
-ALLOWED_HOSTS = ['https://clubatleticorivadavia.com', 'https://www.clubatleticorivadavia.com','.herokuapp.com','192.168.0.14', '127.0.0.1']
+ALLOWED_HOSTS = ['www.clubatleticorivadavia.com','clubatleticorivadavia.com','https://clubatleticorivadavia.com', 'https://www.clubatleticorivadavia.com','.herokuapp.com','192.168.0.14', '127.0.0.1']
 
 
 # Application definition
