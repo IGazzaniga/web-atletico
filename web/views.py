@@ -29,7 +29,7 @@ def web_view(request):
     articulos_inf = Articulo.objects.filter(categoria="Inferiores").order_by('-fecha_hora')[:3]
     articulos_senior = Articulo.objects.filter(categoria="Senior").order_by('-fecha_hora')[:3]
     articulos_inst = Articulo.objects.filter(categoria="Institucionales").order_by('-fecha_hora')[:3]
-    articulos_basquet = Articulo.objects.filter(categoria="Basquet").order_by('-fecha_hora')[:3]
+    articulos_basquet = Articulo.objects.filter(categoria="Básquet").order_by('-fecha_hora')[:3]
     articulos_hockey = Articulo.objects.filter(categoria="Hockey").order_by('-fecha_hora')[:3]
     
     return render(request, 'web/index.html', {'articulos': articulos, 
