@@ -145,7 +145,7 @@
                         <img class="first-slide img-fluid resize" src="{{articulos.0.url_foto}}" alt="First slide">
                         <div class="carousel-caption text-left">
                             <a href="{% url 'detail' slug=articulos.0.slug %}">
-                              <h3 id="slide-title">{{articulos.0.titulo|upper}}</h3>
+                              <h3 id="slide-title">{{articulos.0.titulo}}</h3>
                             </a>
                         </div>
                       </div>
@@ -153,7 +153,7 @@
                         <img class="second-slide img-fluid resize" src="{{articulos.1.url_foto}}" alt="Second slide">
                         <div class="carousel-caption text-left">
                             <a href="{% url 'detail' slug=articulos.1.slug %}">
-                                <h3 id="slide-title">{{articulos.1.titulo|upper}}</h3>
+                                <h3 id="slide-title">{{articulos.1.titulo}}</h3>
                             </a>
                         </div>
                       </div>
@@ -161,7 +161,7 @@
                         <img class="third-slide img-fluid resize" src="{{articulos.2.url_foto}}" alt="Third slide">
                         <div class="carousel-caption text-left">
                             <a href="{% url 'detail' slug=articulos.2.slug %}">
-                                <h3 id="slide-title">{{articulos.2.titulo|upper}}</h3>
+                                <h3 id="slide-title">{{articulos.2.titulo}}</h3>
                             </a>
                         </div>
                       </div>
@@ -188,7 +188,7 @@
                   <a href="{% url 'detail' slug=articulo.slug %}">
                     <span id="reciente">
                     <img class="thumbnail" src="{{articulo.url_foto}}" alt="{{articulo.titulo}}"> 
-                    <h5>{{articulo.titulo|upper|truncatechars:50}}</h5>
+                    <h5>{{articulo.titulo|truncatechars:50}}</h5>
                     </span>  
                   </a>
                 </div>
@@ -209,7 +209,7 @@
                   <a href="{% url 'detail' slug=articulo.slug %}">
                     <span id="reciente">
                     <img class="thumbnail" src="{{articulo.url_foto}}" alt="{{articulo.titulo}}"> 
-                    <h5>{{articulo.titulo|upper|truncatechars:65}}</h5>
+                    <h5>{{articulo.titulo|truncatechars:65}}</h5>
                     </span>  
                   </a>
               </div>
@@ -228,7 +228,7 @@
                     <a href="{% url 'detail' slug=articulo.slug %}">
                       <span id="reciente">
                       <img class="thumbnail" src="{{articulo.url_foto}}" alt="{{articulo.titulo}}"> 
-                      <h5>{{articulo.titulo|upper|truncatechars:65}}</h5>
+                      <h5>{{articulo.titulo|truncatechars:65}}</h5>
                       </span>  
                     </a>
                 </div>
@@ -247,7 +247,7 @@
                     <a href="{% url 'detail' slug=articulo.slug %}">
                       <span id="reciente">
                       <img class="thumbnail" src="{{articulo.url_foto}}" alt="{{articulo.titulo}}"> 
-                      <h5>{{articulo.titulo|upper|truncatechars:65}}</h5>
+                      <h5>{{articulo.titulo|truncatechars:65}}</h5>
                       </span>  
                     </a>
                 </div>
@@ -269,7 +269,7 @@
                       <a href="{% url 'detail' slug=articulo.slug %}">
                         <span id="reciente">
                         <img class="thumbnail" src="{{articulo.url_foto}}" alt="{{articulo.titulo}}"> 
-                        <h5>{{articulo.titulo|upper|truncatechars:65}}</h5>
+                        <h5>{{articulo.titulo|truncatechars:65}}</h5>
                         </span>  
                       </a>
                   </div>
@@ -288,7 +288,7 @@
                       <a href="{% url 'detail' slug=articulo.slug %}">
                         <span id="reciente">
                         <img class="thumbnail" src="{{articulo.url_foto}}" alt="{{articulo.titulo}}"> 
-                        <h5>{{articulo.titulo|upper|truncatechars:65}}</h5>
+                        <h5>{{articulo.titulo|truncatechars:65}}</h5>
                         </span>  
                       </a>
                   </div>
@@ -307,7 +307,7 @@
                       <a href="{% url 'detail' slug=articulo.slug %}">
                         <span id="reciente">
                         <img class="thumbnail" src="{{articulo.url_foto}}" alt="{{articulo.titulo}}"> 
-                        <h5>{{articulo.titulo|upper|truncatechars:65}}</h5>
+                        <h5>{{articulo.titulo|truncatechars:65}}</h5>
                         </span>  
                       </a>
                   </div>

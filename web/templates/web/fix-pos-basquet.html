@@ -9,7 +9,19 @@
     <div class="jumbotron jumbotron-fluid">
             <div class="container">
               <br>
-               
+              <div class="tab fluid-container">
+                <button class="tablinks-bas" onclick="showTable_bas(event, 'Fixture')" id="defaultOpen">Fixture</button>
+                <button class="tablinks-bas" onclick="showTable_bas(event, 'Posiciones')">Posiciones</button>       
+              </div>
+              <div id="Fixture" class="tabcontent">
+                <br>
+                <img class="img-fluid" src="../../static/web/imgs/fixture-1.jpeg" alt="fixture_basquet">
+                <img class="img-fluid" src="../../static/web/imgs/fixture-2.jpeg" alt="fixture_basquet">
+              </div>
+              <div id="Posiciones" class="tabcontent">
+                <br>
+                <img class="img-fluid" src="../../static/web/imgs/posiciones.jpeg" alt="fixture_basquet">
+              </div>
             </div>
     </div>
     {% endblock %}
