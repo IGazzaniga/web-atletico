@@ -307,10 +307,16 @@ footer{
     .img.resize{
         height: 300px !important;
     }
+    #busqueda{
+    height: 35vh;
+    }
 }
 @media only screen and (max-width:1024px){
     h5{
         font-size: 1em !important;
+    }
+    #busqueda{
+    height: 35vh;
     }
 }
 @media only screen and (max-width: 768px){
@@ -357,6 +363,9 @@ footer{
     }
     #titulo-detail{
         font-size:1.5em !important;
+    }
+    #busqueda{
+    height: 35vh;
     }    
 }
 @media only screen and (max-width: 425px){
@@ -369,6 +378,9 @@ footer{
     #social-share{
         display: block !important;
     }
+    #busqueda{
+    height: 35vh;
+    }
 }
 @media only screen and (max-width: 320px){
     #slide-title{
@@ -376,6 +388,9 @@ footer{
     }
     #titulo-detail{
         font-size:1em;
+    }
+    #busqueda{
+    height: 35vh;
     }
 }
 
