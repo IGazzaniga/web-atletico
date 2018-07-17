@@ -13,11 +13,6 @@
                   <p>Publicado el: {{articulo.fecha_hora}}</p>
                       <img class="img-fluid resize" src="{{articulo.url_foto}}" alt="{{articulo.titulo}}"><br>
                   
-                  {% load social_share %}
-                  <span id="social-share">
-                    <span>{% post_to_facebook object_or_url "Compartir en Facebook" %}</span>
-                    <span>{% post_to_twitter "{{articulo.titulo}}" object_or_url "Compartir en Twitter" %}</span>
-                  </span>
                   <div id="cuerpo-detail">
                     {{articulo.cuerpo|safe}}
                     {% if articulo.album_flickr %}
