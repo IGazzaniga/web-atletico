@@ -123,8 +123,18 @@ def fix_pos_inferiores_view(request):
 
 def gurises_view(request):
     """Returns the page Los Gurises"""
-    return render(request, 'web/gurises.html')
-
+    articulos_guri = Articulo.objects.filter(categoria="Gurises").order_by('-fecha_hora')
+    page = request.GET.get('page', 1)
+    paginator = Paginator(articulos_guri, 3)
+    
+    try:
+        articulos_guri = paginator.page(page)
+    except PageNotAnInteger:
+        articulos_guri = paginator.page(1)
+    except EmptyPage:
+        articulos_guri = paginator.page(paginator.num_pages)
+    return render(request, 'web/gurises.html', {'articulos':articulos_guri})
+    
 #Senior
 def novedades_senior_view(request):
     """Returns the page Novedades Senior."""
