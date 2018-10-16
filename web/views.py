@@ -18,7 +18,7 @@ def search(request):
     query = request.GET.get('q', '')
     if query:
             qset = Q(titulo__icontains=query) | Q(cuerpo__icontains=query)
-            results = Articulo.objects.filter(qset).distinct()
+            results = Articulo.objects.filter(qset).distinct().order_by('-fecha_hora')
     return render_to_response('web/buscar.html', {"results": results, "query": query})
 
 #Inicio
